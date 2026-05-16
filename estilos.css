@@ -1,0 +1,171 @@
+
+ {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.4;
+  background: #f5f7fb;
+  color: #222;
+  padding: 24px;
+}
+
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #dedede;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(25, 25, 25, 0.04);
+}
+
+
+header h1 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+  color: #0b3d91;
+}
+
+header p.lead {
+  color: #444;
+  margin-bottom: 12px;
+}
+
+/* Navegación simple */
+nav a {
+  color: #0b66d1;
+  text-decoration: none;
+  margin-right: 12px;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+#cartas {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+/* Cada carta */
+.carta {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  border: 1px solid #cfcfcf;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.carta h6 {
+  font-size: 0.95rem;
+  margin: 6px 0 4px;
+  color: #222;
+}
+
+.carta p {
+  font-size: 0.88rem;
+  margin: 2px 0;
+  color: #333;
+}
+
+/* Imagen de la carta */
+.carta img {
+  width: 110px;
+  height: auto;
+  margin: 8px 0;
+  border-radius: 4px;
+  border: 1px solid #e2e2e2;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.carta img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(10, 10, 10, 0.08);
+}
+
+button, .btn {
+  background: #0b66d1;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  transition: background .12s ease, transform .08s ease;
+}
+
+button:hover, .btn:hover {
+  background: #0955b0;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.paginacion {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+  align-items: center;
+  border-top: 1px solid #dfdfdf;
+  padding-top: 12px;
+}
+
+.mensaje-fin, #cartas:empty {
+  width: 100%;
+  text-align: center;
+  color: #666;
+  padding: 24px 8px;
+  font-style: italic;
+}
+
+/* Footer simple */
+footer {
+  margin-top: 16px;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+#guardados-container {
+  padding: 8px 4px;
+}
+
+@media (max-width: 540px) {
+  #cartas {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .carta {
+    min-height: 220px;
+    padding: 10px;
+  }
+
+  .carta img {
+    width: 90px;
+  }
+
+  header h1 {
+    font-size: 1.25rem;
+  }
+}
